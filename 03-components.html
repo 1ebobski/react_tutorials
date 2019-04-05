@@ -1,0 +1,22 @@
+<div id="root"></div>
+<script src="https://unpkg.com/react@16.0.0-rc.3/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16.0.0-rc.3/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+<script type="text/babel">
+const rootElement = document.getElementById('root')
+let user = {
+	name: 'Fedor'
+}
+const Message = props => <h1>{props.children}</h1>
+
+const element = (
+	<div>
+		<Message>Hello, {user.name}!</Message>
+		<Message>Goodbye, {user.name}!</Message>
+	</div>
+	)
+console.log(element)
+ReactDOM.render(element, rootElement)
+
+
+</script>
